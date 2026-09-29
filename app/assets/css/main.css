@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bleu: #02416a;
+  --color-rose: #eb918d;
+  --color-chaire: #fef5f0;
+  --color-vert: #a5d0cd;
+  --color-white: #ffffff;
+  --font-display: 'Playfair Display Variable';
+  --font-sans: 'Lato', sans-serif;
+}
+
+.container-layout{
+  @apply max-w-screen-xl mx-auto px-4
+}
+
