@@ -71,7 +71,7 @@
         <div class="container-layout lg:grid lg:grid-cols-2 lg:gap-16">
           <div class="space-y-8">
             <h3 class="lg:text-4xl text-3xl mb-6 font-display font-bold text-rose">Me joindre</h3>
-            <div class="flex items-center space-x-2"><img src="/web/20240329104353im_/https://isabelleory.fr/_nuxt/icone-pin-rose.f42daea1.png" alt="" class="h-8"><span> 7 rue Bascoulard, 18290, Civray</span></div><div class="flex items-center space-x-2"><img src="/web/20240329104353im_/https://isabelleory.fr/_nuxt/icone-tel-rose.6384c666.png" alt="" class="h-8"><span>06 70 70 72 40</span></div><div class="text-rose font-bold"> UNIQUEMENT SUR RENDEZ-VOUS </div><div class="w-32"><img src="/web/20240329104353im_/https://isabelleory.fr/_nuxt/logo-reduit.1595fea1.png" alt=""></div></div>
+            <div class="flex items-center space-x-2"><span> 7 rue Bascoulard, 18290, Civray</span></div><div class="flex items-center space-x-2"><span>06 70 70 72 40</span></div><div class="text-rose font-bold"> UNIQUEMENT SUR RENDEZ-VOUS </div><div class="w-32"> </div></div>
 
           <div>
             <h3 class="lg:text-4xl text-3xl mb-6 font-display font-bold text-rose">Envoyez-moi un message</h3>
@@ -90,3 +90,5 @@
 
 }
 </style>
+<script setup lang="ts">
+</script>
