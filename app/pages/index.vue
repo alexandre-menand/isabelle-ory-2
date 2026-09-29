@@ -6,16 +6,16 @@
       <div class="flex flex-col items-center justify-center mt-16">
         <!-- image header -->
         <div>
-          <img src="~/assets/img/logos/logo-header.png" alt="" class="w-96"/>
+          <img src="./img/logos/logo-header.png" alt="" class="w-96"/>
         </div>
 
         <!-- cta du header -->
         <div class="grid grid-cols-3 gap-x-4 mt-12">
-          <NuxtLink class="btn-header"><img src="~/assets/img/icons/icone-pin-rose.png" alt="" class="h-8">20 Av. Gabriel Dordain, 18400 Saint-Florent-sur-Cher</NuxtLink>
+          <NuxtLink class="btn-header"><img src="./img/icons/icone-pin-rose.png" alt="" class="h-8">20 Av. Gabriel Dordain, 18400 Saint-Florent-sur-Cher</NuxtLink>
 
           <NuxtLink class="btn-header text-rose">UNIQUEMENT SUR RENDEZ-VOUS</NuxtLink>
 
-          <NuxtLink class="btn-header"><img src="~/assets/img/icons/icone-tel-rose.png" alt="" class="h-8">06 70 70 72 40</NuxtLink>
+          <NuxtLink class="btn-header"><img src="./img/icons/icone-tel-rose.png" alt="" class="h-8">06 70 70 72 40</NuxtLink>
         </div>
         <div>
           <p class="text-white mt-4 text-chaire font-bold text-sm">Informations légales - N° SIRET : 489 875 294 00022</p>
@@ -45,7 +45,7 @@
           </p>
         </div>
         <div class="w-1/2">
-          <img src="~/assets/img/photos/feuille-comp.png" />
+          <img src="./img/photos/feuille-comp.png" />
         </div>
 
       </section>
@@ -61,7 +61,7 @@
           </p>
         </div>
         <div class="w-1/2">
-          <img src="~/assets/img/photos/zen-comp.png" />
+          <img src="./img/photos/zen-comp.png" />
         </div>
 
       </section>
