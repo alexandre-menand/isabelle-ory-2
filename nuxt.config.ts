@@ -11,4 +11,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     resendApiKey: '',
   },
+  modules: [
+    '@vee-validate/nuxt',
+  ]
 })

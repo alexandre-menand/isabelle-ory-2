@@ -10,7 +10,7 @@
         </div>
 
         <!-- cta du header -->
-        <div class="grid grid-cols-3 gap-x-4 mt-12">
+        <div class="grid grid-cols-3 gap-x-4 mt-12 max-w-7xl text-xs">
           <NuxtLink class="btn-header"><img src="/img/icons/icone-pin-rose.png" alt="" class="h-8">20 Av. Gabriel Dordain, 18400 Saint-Florent-sur-Cher</NuxtLink>
 
           <NuxtLink class="btn-header text-rose">UNIQUEMENT SUR RENDEZ-VOUS</NuxtLink>
@@ -23,7 +23,7 @@
       </div>
     </header>
     <main>
-      <section class=" container-layout gap-16 my-32 flex items-end">
+      <section class=" container-layout gap-16 my-32 flex items-end" id="facias">
         <div class="space-y-12 w-1/2 ">
           <h1 class="text-4xl text-center text-rose font-bold font-display">Les Fascias</h1>
           <p class="text-bleu">
@@ -50,7 +50,7 @@
 
       </section>
 
-      <section class=" container-layout gap-16 my-32 flex items-center flex-row-reverse">
+      <section class=" container-layout gap-16 my-32 flex items-center flex-row-reverse" id="technique">
         <div class="space-y-12 w-1/2 ">
           <h1 class="text-4xl text-center text-vert font-bold font-display">Technique de soins</h1>
           <p class="text-bleu">
@@ -66,7 +66,7 @@
 
       </section>
 
-      <section id="contact" class="py-32 bg-cover bg-[url('/img/photos/gouutte-comp.jpg')] bg-right-bottom">
+      <section id="contact" class="py-32 bg-cover bg-[url('/img/photos/gouutte-comp.jpg')] bg-[-80px] ">
 
         <div class="container-layout lg:grid lg:grid-cols-2 lg:gap-16">
           <div class="space-y-8">
@@ -74,10 +74,13 @@
             <div class="flex items-center space-x-2"><span> 7 rue Bascoulard, 18290, Civray</span></div><div class="flex items-center space-x-2"><span>06 70 70 72 40</span></div><div class="text-rose font-bold"> UNIQUEMENT SUR RENDEZ-VOUS </div><div class="w-32"> </div></div>
 
           <div>
-            <h3 class="lg:text-4xl text-3xl mb-6 font-display font-bold text-rose">Envoyez-moi un message</h3>
-            <Form />
+            <h3 class="lg:text-4xl text-3xl mb-6 font-display font-bold text-rose">Envoyez-moi un message par mail</h3>
+            <div class="flex justify-start">
+
+              <a class="cta" href="mailto:orisabelle@orange.fr">orisabelle@orange.fr</a>
+            </div>
           </div>
-        </div><
+        </div>
       </section>
     </main>
   </div>
@@ -86,8 +89,12 @@
 <style>
 @reference "~/assets/css/main.css";
 .btn-header{
-  @apply bg-chaire flex  items-center px-8 py-4 justify-center text-bleu font-semibold rounded-lg
+  @apply bg-chaire flex  items-center px-6 py-4 justify-center text-bleu font-semibold rounded-lg
 
+}
+
+.cta {
+  @apply bg-rose text-white p-4 mt-4 rounded-2xl col-span-2 hover:bg-rose/80 block
 }
 </style>
 <script setup lang="ts">

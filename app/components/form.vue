@@ -1,4 +1,34 @@
+
+
 <script setup>
+import { toTypedSchema } from '@vee-validate/zod'
+import { useForm, Field as VeeField } from 'vee-validate'
+import { z } from 'zod'
+
+const formSchema = toTypedSchema(
+    z.object({
+      title: z
+          .string()
+          .min(1, 'Bug title must be at least 5 characters.'),
+      description: z
+          .string()
+          .min(20, 'Description must be at least 20 characters.'),
+    }),
+)
+
+const { handleSubmit, resetForm } = useForm({
+  validationSchema: formSchema,
+  initialValues: {
+    title: '',
+    description: '',
+  },
+})
+
+
+const onSubmit = handleSubmit((data) => {
+  console.log("test")
+})
+
 const form = ref({
   nom: '',
   prenom: '',
@@ -6,21 +36,24 @@ const form = ref({
   tel: '',
   message: ''
 })
-
-async function submit () {
-  const { body } = await $fetch('/api/contact', {
-    method: 'post',
-    body: {},
-  })
-}
+//
+// async function submit () {
+//   const { body } = await $fetch('/api/contact', {
+//     method: 'post',
+//     body: {},
+//   })
+// }
 </script>
 
 <template>
-  <form class="grid grid-cols-2 gap-4">
-    <div class="input">
-      <label for="nom" >Nom :</label>
-      <input id="nom" type="text" v-model="form.nom"/>
-    </div>
+  <form class="grid grid-cols-2 gap-4" @submit="onSubmit">
+    <VeeField v-slot="{ componentField, errors }" name="title">
+      <div class="input">
+        <label for="nom" >Nom :</label>
+        <input id="nom" type="text" v-bind="componentField"/>
+        {{errors}}
+      </div>
+    </VeeField>
 
     <div class="input">
       <label for="prenom" >Prénom :</label>
@@ -42,7 +75,7 @@ async function submit () {
       <textarea id="message" type="text" v-model="form.message"/>
     </div>
 
-    <button :click="submit()">Envoyer un message</button>
+    <button class="cta" type="submit">Envoyer un message</button>
   </form>
 </template>
 
@@ -53,6 +86,10 @@ async function submit () {
   @apply flex flex-col w-full text-bleu font-semibold
 }
 .input input, .input textarea{
-  @apply w-full px-2 py-2 border-bleu border-2 rounded-lg
+  @apply w-full px-2 py-2 border-bleu border-2 rounded-lg bg-white
+}
+
+.cta {
+  @apply bg-rose text-white p-3 rounded-2xl col-span-2 hover:bg-rose/80
 }
 </style>
